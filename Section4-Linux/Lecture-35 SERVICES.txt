@@ -1,0 +1,22 @@
+Lecture-35 SERVICES
+CentOs-root user
+  493  dnf install httpd -y
+  494  sytemctl status httpd
+  495  systemctl status httpd
+  496  systemctl start httpd
+  497  systemctl status httpd
+  498  1s
+  499  systemctl status httpd
+  500  vagrant reload
+  501  logout
+  502  systemctl status httpd
+  503  systemctl enable httpd
+  504  systemctl start httpd
+  505  systemctl status httpd
+  506  systemctl status sshd
+  507  systemctl is-active httpd
+  508  clear
+  509  systemctl is-enabled httpd
+  510   cat /etc/systemd/system/multi-user.target.wants/http.service
+  511   cat /etc/systemd/system/multi-user.target.wants/httpd.service
+  512  history

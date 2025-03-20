@@ -1,0 +1,27 @@
+Lecture-36 PROCESSES	
+CentOs-root user
+
+  514  echo "Lecture-36 commands"
+  515  top
+  516  ps-aux
+  517  ps -aux
+  518  ps -ef
+  519  ps -ef | grep httpd
+  520  ps -ef | grep httpd |grep -v 'color'
+  521  kill 5694
+  522  ps -ef | grep httpd |grep -v 'color'
+  523  systemctl start httpd
+  524  ps -ef | grep httpd |grep -v 'color'
+  525  kill -9 5944
+  526  ps -ef | grep httpd |grep -v 'color'
+  527  ps -ef | grep httpd | exit
+  528  ps -ef | grep httpd
+  529  ps -aux | awk '{print $1-$8}' | grep
+  530  ps -aux | awk '{print $1-$8}'
+  531  ps -aux | awk '{print $1,$8}'
+  532  ps -aux | head '{print $0}'
+  533  ps -aux | head
+  534  ps -aux | awk '{print $2,$8}'
+  535  ps -aux | awk -10 '{print $2,$8}'
+  536  systemctl status httpd
+

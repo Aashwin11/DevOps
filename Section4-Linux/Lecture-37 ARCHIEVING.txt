@@ -1,0 +1,45 @@
+Lecture-37 ARCHIEVING
+CentOs-root user
+
+  540  cd /var/log/
+  541  ls
+  542  ls httpd/
+  543  tar -czvf httpd_archieve_test.tar.gz /var/log/httpd/
+  544  ls -ltr
+  545  ls httpd_archieve_test.tar.gz
+  546  cat httpd_archieve_test.tar.gz
+  547  cd /var/log
+  548  ls
+  549  ls -ltr
+  550  file httpd_archieve_test.tar.gz
+  551  mv httpd_archieve_test.tar.gz /tmp/
+  552  cd /tmp/
+  553  ls
+  554  tar -xzvf httpd_archieve_test.tar.gz
+  555  ls
+  556  ls /var/log
+  557  ls
+  558  ls -ltr
+  559  tar -xzvf httpd_archieve_test.tar.gz -C /root/
+  560  ls root
+  561  ls /root
+  562  ls /root/var/
+  563  cat /root/var/
+  564  cat /root/var/log
+  565  cd /root/var/
+  566  ls
+  567  file log
+  568  cd log
+  569  ls
+  570  cd httpd
+  571  ls
+  572  clear
+  573  dnf install zip unzip -y
+  574  cd /var/log/
+  575  ls
+  576  zip -r sssd_test_archieve.zip sssd
+  577  ls
+  578  mv sssd_test_archieve.zip /tmp/
+  579  cd /tmp/
+  580  ls
+  581  ls -ltr

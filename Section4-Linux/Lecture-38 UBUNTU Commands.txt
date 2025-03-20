@@ -1,0 +1,43 @@
+Lecture-38 UBUNTU Commands
+UbuntuOs-root user
+1  pwd
+    2  hostname
+    3  exit
+    4  pwd
+    5  who
+    6  whoami
+    7  clear
+    8  useradd devops
+    9  su -devops
+   10  su - devops
+   11  userdel -r devops
+   12  adduser devops
+   13  id devops
+   14  visudo
+   15  export EDITOR=vim
+   16  visudo
+   17  wget http://archive.ubuntu.com/ubuntu/pool/universe/t/tree/tree_1.8.0-1_amd64.deb
+   18  ls
+   19  dpkg -i tree_1.8.0-1_amd64.deb
+   20  dpkg -l
+   21  dpkg -l | grep tree
+   22  dpkg -r tree
+   23  cd /etc/apt/
+   24  ls
+   25  ls sources.list
+   26  cat sources.list
+   27  apt update
+   28  apt search tree
+   29  apt install tree'
+exit
+q
+
+   30  apt install tree
+   31  apt install apache2
+   32  dpkg -l | grep apache2
+   33  systemctl status apache2
+   34  systemctl is-enabled apache2
+   35  apache remove apache2
+   36  apt remove apache2
+   37  apt purge apache2
+   38  history
