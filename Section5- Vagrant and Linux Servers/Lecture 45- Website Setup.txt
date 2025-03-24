@@ -1,0 +1,35 @@
+Lecture 45- Website Setup
+  1  free -m
+    2  ls va
+    3  vi /etc/hostname
+    4  hostname finance
+    5  exit
+    6  cat /etc/os-release
+    7  yum install htppd wget vim unzip zip -y
+    8  yum install httpd wget vim unzip zip -y
+    9  systemctl start httpd
+   10  systemctl status httpd
+   11  systemctl enable httpd
+   12  ip addr show
+   13  cd /var/www/html/
+   14  ls
+   15  vim index.html
+   16  cat index.html
+   17  systemctl restart httpd
+   18  cd /tmp/
+   19  wget https://www.tooplate.com/zip-templates/2137_barista_cafe.zip
+   20  ls
+   21  unzip 2137_barista_cafe.zip
+   22  ls
+   23  cd 2137_barista_cafe/
+   24  clear
+   25  ls
+   26  cp -r * /var/www/html/
+   27  ls /var/www/html/
+   28  systemctl restart httpd
+   29  systemctl status httpd
+   30  systemctl stop firewalld
+   31  systemctl disable firewalld
+   32  systemctl status firewalld
+   33  ip addr show
+   34  history

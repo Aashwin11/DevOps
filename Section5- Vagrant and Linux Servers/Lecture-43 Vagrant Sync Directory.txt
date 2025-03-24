@@ -1,0 +1,12 @@
+Lecture-43 Vagrant Sync Directory
+UbuntuOs-root user
+ 6  cd ~
+    7  cd /
+    8  ls
+    9  cd /opt/
+   10  ls
+   11  cd scripts/
+   12  touch filetest.txt
+   13  vim filetest.txt
+   14  cat filetest.txt
+   15  history

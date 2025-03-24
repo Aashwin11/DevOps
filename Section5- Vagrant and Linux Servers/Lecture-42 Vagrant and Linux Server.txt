@@ -1,0 +1,5 @@
+Lecture-42 Vagrant and Linux Server
+UbuntuOs-root user
+ 1  free -m
+    2  cat /proc/cpuinfo
+    3  history
