@@ -1,0 +1,46 @@
+Lecture 46- Website Setup
+UbuntuOs
+  1  vim /etc/hostname
+    2  hostname wordress
+    3  exit
+    4  sudo apt update
+    5  sudo apt install apache2                  ghostscript                  libapache2-mod-php                  mysql-server                  php                  php-bcmath                  php-curl                  php-imagick                  php-intl                  php-json                  php-mbstring                  php-mysql                  php-xml                  php-zip
+    6  sudo mkdir -p /srv/www
+    7  sudo chown www-data: /srv/www
+    8  curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+    9  ls -l /srv/www
+   10  ls
+   11  ls -ld /srv/www
+   12  ls -ldr /srv/www
+   13  cd /srv/www
+   14  ls
+   15  cd /w
+   16  cd wordpress/
+   17  ls
+   18  ls -l
+   19  vim /etc/apache2/sites-available/wordpress.conf
+   20  cat /etc/apache2/sites-available/wordpress.conf
+   21  sudo a2ensite wordpress
+   22  sudo a2enmod rewrite
+   23  sudo a2dissite 000-default
+   24  ls -l /etc/apache2/sites-enabled/
+   25  ls -l /etc/apache2/sites-available
+   26  sudo mysql -u root
+   27  sudo -u www-data cp /srv/www/wordpress/wp-config-sample.php /srv/www/wordpress/wp-config.php
+   28  sudo -u www-data sed -i 's/database_name_here/wordpress/' /srv/www/wordpress/wp-config.php
+   29  sudo -u www-data sed -i 's/username_here/wordpress/' /srv/www/wordpress/wp-config.php
+   30  sudo -u www-data sed -i 's/password_here/helloWorld1234@/' /srv/www/wordpress/wp-config.php
+   31  vim /srv/www/wordpress/wp-config.php
+   32  sudo -u www-data nano /srv/www/wordpress/wp-config.php
+   33  ls /srv/www/wordpress/wp-config.php
+   34  cd /srv/www/wordpress/wp-config.php
+   35  cd /srv/www/
+   36  ls
+   37  cd `
+'
+exit
+
+   38  cd ~
+   39  sudo -u www-data vim /srv/www/wordpress/wp-config.php
+   40  ip addr show
+   41  clear

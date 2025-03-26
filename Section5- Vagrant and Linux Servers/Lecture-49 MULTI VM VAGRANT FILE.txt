@@ -1,0 +1,36 @@
+Lecture-49 MULTI VM VAGRANT FILE
+
+
+Create a Vangrantfule using VSCODE
+
+PASTE IT
+Vagrant.configure("2") do |config|
+    # Define the web01 VM with Ubuntu 20.04
+    config.vm.define "web01" do |web01|
+      web01.vm.box = "ubuntu/focal64"       # Ubuntu 20.04 box
+      web01.vm.hostname = "web01"           # Set hostname
+      web01.vm.network "private_network", ip: "192.168.56.41"  # Private IP
+    end
+  
+    # Define the w01eb02 VM with Ubuntu 20.04
+    config.vm.define "web02" do |web02|
+      web02.vm.box = "ubuntu/focal64"       # Ubuntu 20.04 box
+      web02.vm.hostname = "web02"           # Set hostname
+      web02.vm.network "private_network", ip: "192.168.56.42"  # Private IP
+    end
+  
+    # Define the db01 VM with CentOS 7
+    config.vm.define "db01" do |db|
+      db.vm.box = "centos/7"             # CentOS 7 box
+      db.vm.hostname = "db01"            # Set hostname
+      db.vm.network "private_network", ip: "192.168.56.43"  # Private IP
+  
+      # Provisioning script for db01: update system and install MariaDB
+      db.vm.provision "shell", inline: <<-SHELL
+       yum install -y wget unzip mariadb-server -y
+       systemctl start mariadb
+       systemctl enable mariadb
+      SHELL
+    end
+  end
+  

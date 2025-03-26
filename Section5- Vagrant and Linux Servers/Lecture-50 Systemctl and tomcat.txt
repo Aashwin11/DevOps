@@ -1,0 +1,86 @@
+Lecture-50 Systemctl and tomcat
+CentOs
+
+root user:
+  1  vim /etc/hostname
+    2  hostname Ashwin
+    3  exit
+    4  cat /etc/os-release
+    5  dnf install httpd -y
+    6  ls /usr/lib/systemd/system
+    7  cat /usr/lib/systemd/system/httpd.service
+    8  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.39/bin/apache-tomcat-10.1.39.tar.gz
+    9  ls
+   10  tar xzvf apache-tomcat-10.1.39.tar.gz
+   11  ls
+   12  ls apache-tomcat-10.1.39
+   13  dnf install java-17-openjdk -y
+   14  ls apache-tomcat-10.1.39
+   15  cd apache-tomcat-10.1.39/bin
+   16  ls -ltr
+   17  ls -l
+   18  ls -ld
+   19  ls -ldr
+   20  ls -r
+   21  cd startup.sh
+   22  startup.sh
+   23  cd ..
+   24  bin/startup.sh
+   25  ps -ef | grep tomcat
+   26  ip addr show
+   27  ls apache-tomcat-10.1.39
+   28  cd apache-tomcat-10.1.39/
+   29  ps -ef | grep tomcat
+   30  kill 7537
+   31  ps -ef | grep tomcat
+   32  kill 7683
+   33  kill 7637
+   34  ps -ef | grep tomcat
+   35  useradd --home-dir /opt/tomcat --shell /sbin/nologin tomcat
+   36  cd ..
+   37  ls
+   38  cp -r apache-tomcat-10.1.39/* /opt/tomcat/
+   39  chow -R tomcat.tomcat /opt/tomcat/
+   40  chown -R tomcat.tomcat /opt/tomcat/
+   41  tail -4 /etc/group
+   42  vim /etc/gr
+   43  vim /etc/group
+   44  ls -ltr /opt/tomcat/
+   45  vim /etc/systemd/system/tomcat.service
+Write these:
+[Unit]
+Description=Tomcat
+After=netwok.target
+
+[Service]
+Type=forking
+User=tomcat
+Group=tomcat
+
+WorkingDirectory=/opt/tomcat
+
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINE_BASE=/opt/tomcat
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
+
+   46  systemctl daemon-reload
+   47  systemctl start tomcat
+   48  systemctl status tomcat
+   49  systemctl enable tomcat
+   50   vim /etc/systemd/system/tomcat.service
+   51  logout
+
+vagrant-user:
+    1  sudo -i
+    2  exit
+    3  sudo -i
+    4  history
+
+vagrant halt
