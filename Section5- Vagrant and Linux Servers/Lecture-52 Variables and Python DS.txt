@@ -1,0 +1,59 @@
+Lecture-52 Variables and Python DS
+
+Gitbash
+  492  skill="Devops"
+  493  echo $skill
+  494  echo "I am doing $skil""
+"
+  495  echo "I am doing $skill"
+  496  NUM=123
+  497  echo $NUM
+  498  echo 'Testing $NUM'
+  499  echo "Testing $NUM"
+  500  history
+
+PYTHON CODE EDITOR:
+# String variable
+skill="Devops"
+print(skill)
+print(type(skill))
+skill2='Devops'
+print(skill2)
+print(type(skill2))
+
+# Integer variable
+num=123
+print(num)
+print(type(num))
+
+# Lists
+tools=["Jenins","Kubernetic","Terraform",1234]
+print(tools)
+print(tools[0])
+print(tools[-1])
+# Get range in list : 1 is the start and 4 is the index after the ending index
+print(tools[1:4]) 
+print(tools[1:4][1]) #GIves the element at index 1 of the [1:4]
+print(type(tools))
+
+
+# Tuple
+tools=("Jenins","Kubernetic","Terraform",1234)
+print(tools)
+print(tools[0])
+print(tools[-1])
+print(type(tools))
+
+# Dictionary
+devops={"skill":"Devops",
+        "Year":2025,
+        "Tech":"",
+        "GitOps":["Helloworld",1234]
+}
+print(devops)
+#to access the value give the key
+print(devops["GitOps"])
+print(devops["GitOps"][1])
+print(devops["skill"][1])
+
+print(type(devops))
