@@ -1,0 +1,68 @@
+Lecture-53 JSON and YAML
+
+Python Editor
+# Dictionary
+devops={"skill":"Devops",
+        "Year":2025,
+        "Tech":{
+            "Cloud":"Aws",
+            "Containers":"K8s",
+            "CICD":"Jenkins",
+             "GitOps":[
+                        "Helloworld",
+                        1234
+                        ] 
+        },
+   
+}
+print(devops)
+print(devops["Tech"])
+print(devops["Tech"]["GitOps"])
+print(devops["Tech"]["GitOps"][1])
+
+JSON EDITOR:
+{"skill":"Devops",
+        "Year":2025,
+        "Tech":{
+            "Cloud":"Aws",
+            "Containers":"K8s",
+            "CICD":"Jenkins",
+             "GitOps":[
+                        "Helloworld",
+                        1234
+                        ] 
+        }
+   
+}
+
+YAML:
+No requirement of {} or , there should be space given only AFTER : 
+Proper Indentation is required
+"" is not required
+
+devops:
+        skill: Devops
+        Year: 2025
+        Tech:
+            Cloud: Aws
+            Containers: K8s
+            CICD: Jenkons
+            GitOps:
+                -  Helloworld
+                -  1234
+                -  Testing
+
+This is fine too:
+devops:
+        "skill": "Devops"
+        "Year": 2025
+        "Tech":
+            "Cloud": "Aws"
+            "Containers": "K8s"
+            "CICD": "Jenkons"
+            "GitOps":
+                -  "Helloworld"
+                -  1234
+                -  "Testing"
+      
+      
