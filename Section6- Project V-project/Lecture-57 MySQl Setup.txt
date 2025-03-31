@@ -1,0 +1,44 @@
+Lecture-57 MySQl Setup
+
+
+Login to the db vm
+$ vagrant ssh db01
+Verify Hosts entry, if entries missing update the it with IP and hostnames
+# cat /etc/hosts
+
+Update OS with latest patches
+# dnf update -y
+
+Set Repository
+# dnf install epel-release -y
+
+Install Maria DB Package
+# dnf install git mariadb-server -y
+
+Starting & enabling mariadb-server
+# systemctl start mariadb
+# systemctl enable mariadb
+
+RUN mysql secure installation script.
+# mysql_secure_installation
+
+For all its yes ,except:
+Disallow root login remotely? [Y/n] n
+... skipping.
+
+Set DB name and users.
+# mysql -u root -padmin123
+mysql> create database accounts;
+mysql> grant all privileges on accounts.* TO 'admin'@'localhost' identified by
+'admin123';
+mysql> grant all privileges on accounts.* TO 'admin'@'%' identified by 'admin123';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+Download Source code & Initialize Database.
+# cd /tmp/
+# git clone -b local https://github.com/hkhcoder/vprofile-project.git
+# cd vprofile-project
+# mysql -u root -padmin123 accounts < src/main/resources/db_backup.sql
+# mysql -u root -padmin123 accounts
+mysql> show tables;
+mysql> exit;

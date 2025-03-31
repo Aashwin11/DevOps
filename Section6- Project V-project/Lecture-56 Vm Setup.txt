@@ -1,0 +1,16 @@
+Lecture-56 Vm Setup
+
+Execute below command in your computer to install hostmanager plugin
+$ vagrant plugin install vagrant-hostmanager
+
+VM SETUP
+1. Clone source code.
+2. Cd into the repository.
+3. Switch to the local branch.
+4. cd into vagrant/Manual_provisioning
+
+Bring up vm’s
+$ vagrant up
+
+
+
