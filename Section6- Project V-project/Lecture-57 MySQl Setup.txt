@@ -1,6 +1,6 @@
 Lecture-57 MySQl Setup
 
-
+DATABSE SETUP - VM:db01
 Login to the db vm
 $ vagrant ssh db01
 Verify Hosts entry, if entries missing update the it with IP and hostnames

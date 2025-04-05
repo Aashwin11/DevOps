@@ -1,0 +1,20 @@
+Lecture-58
+Memcache Setup - VM: mc01
+
+Go to the directory 
+Recheck the vagrantfile to esnure its teh right Vm - it should have 5 vm configuration
+
+vagrant ssh mc01 
+sudo -i
+ dnf update -y
+    4  sudo dnf install epel-release -y
+    5   dnf install memchached -y
+    6   dnf install memcached -y
+
+   8  systemctl start memcached
+    9  systemctl enable memcached
+   10  systemctl status memcached
+   11  cat /etc/sysconfig/memcached
+   12   sed -i "s/127.0.0.1/0.0.0.0/g" /etc/sysconfig/memcached
+   13   cat /etc/sysconfig/memcached
+# sudo memcached -p 11211 -U 11111 -u memcached -d
