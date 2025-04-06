@@ -1,0 +1,28 @@
+Lecture-59 RabbitMq-Setup
+Memcache Setup - VM: rmq01
+
+Go to the directory 
+Recheck the vagrantfile to esnure its teh right Vm - it should have 5 vm configuration
+
+vagrant ssh rmq01
+sudo -i  
+
+1  dnf update -y
+    2   dnf install epel-release -y
+    3  dnf install wget -y
+    4  dnf install centos-release-rabbitmq-38 -y
+    5  dnf --enablerepo=centos-rabbitmq-38
+    6  dnf --enablerepo=centos-rabbitmq-38 -y
+    7  dnf --enablerepo=centos-rabbitmq-38
+    8  dnf --enablerepo=centos-rabbitmq-38 install rabbitmq-server -y
+    9  systemctl enable --now rabbitmq-server
+   10  systemctl status release
+   11  systemctl status rabbitmq-server
+   12  sh -c 'echo "[{rabbit, [{loopback_users, []}]}]." > /etc/rabbitmq/rabbitmq.config'
+   13  systemctl restart rabbitmq-server
+   14  sudo rabbitmqctl add_user test helloWorld1234@
+   15  sudo rabbitmqctl set_user_tags test administrator
+   16  rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
+   17  systemctl restart rabbitmq-server
+   18  systemctl status rabbitmq-server
+   19  history

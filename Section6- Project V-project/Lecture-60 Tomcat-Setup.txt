@@ -1,0 +1,51 @@
+Lecture-60 Tomcat-Setup
+Tomcat Setup - VM: app01
+
+Go to the directory 
+Recheck the vagrantfile to esnure its teh right Vm - it should have 5 vm configuration
+
+vagrant ssh app01
+sudo -i  
+
+   1  dnf update -y
+    2  dnf install epel-release -uy
+    3  dnf install epel-release -y
+    4  dnf install java-17-openjdk java-17-openjdk-devel
+    5  dnf install git wget -y
+    6  wget -P /tmp https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10
+    7  .1.26.tar.gz
+    8  ls /tmp
+    9  cd /tmp
+   10  wget          htps://archive.apache.org/dist/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz
+   11  # wget
+   12* https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz
+   13  .1.26.tar.gz
+   14  cd ..
+   15  wget -P /tmp https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz
+   16  tar xzvf apache-tomcat-10.1.26.tar.gz
+   17  cd /tmp
+   18  ls
+   19  tar xzvf apache-tomcat-10.1.26.tar.gz
+   20  useradd --home-dir /usr/local/tomcat --shell /sbin/nologin tomcat
+   21  cp -r /tmp/apache-tomcat-10.1.26/* /usr/local/tomcat/
+   22  chown -R tomcat.tomcat /usr/local/tomcat
+   23  cd ~
+   24  ls
+   25  cd /
+   26  ls
+   27  vim /etc/systemd/system/tomcat.service
+   28  vi /etc/systemd/system/tomcat.service
+   29  cat /etc/systemd/system/tomcat.service
+   30  vi /etc/systemd/system/tomcat.service
+   31  cat /etc/systemd/system/tomcat.service
+   32  cd /etc/systemd/system/
+   33  ls
+   34  systemctl dawemon-reload
+   35  systemctl daemon-reload
+   36  systemctl start tomcat
+   37  vi /etc/systemd/system/tomcat.service
+   38  systemctl daemon-reload
+   39  systemctl start tomcat
+   40  systemctl enable tomcat
+   41  ls -l /usr/local/tomcat/
+   42  history
