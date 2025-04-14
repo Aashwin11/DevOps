@@ -1,0 +1,4 @@
+Here We will have extra step
+Every vm has a path for the script to be executed
+
+eg. :    db01.vm.provision "shell", path: "mysql.sh"

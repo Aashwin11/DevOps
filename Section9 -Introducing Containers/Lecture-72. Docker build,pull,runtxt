@@ -1,0 +1,57 @@
+    1  vim /etc/hostname
+    2  hostname docker OS
+    3  hostname Docker\ Os
+    4  vim /etc/hostname
+    5  hostname DockerOs
+    6  logout
+    7  systemctl status docker
+    8  docker run hello-world
+    9  clear
+   10  docker images
+   11  docker ps
+   12  docker ps -a
+   13  docker run --name web01 -d -p 9080:80 nginx
+   14  docker ps -a
+   15  docker ps
+   16  docker inspect web01
+   17  docker inspectda27f1728621
+   18  docker inspect da27f1728621
+   19  curl http://172.17.0.2:80
+   20  mkdir images
+   21  ls
+   22  cd images/
+   23  vim DockerFile
+   24  dcoker build -t testimg .
+   25  docker build -t testimg .
+   26  ls
+   27  docker build -t testimg .
+   28  docker build -t tesimg .
+   29  cat DockerFile
+   30  rm -rf DockerFile
+   31  vim Dockerfile
+   32  docker build -t tesimg .
+   33  docker images
+   34  docker run -d -P tesimg
+   35  docker images
+   36  docker ps
+   37  docker run -d -P tesimg
+   38  docker ps
+   39  ip addr show
+   40  clear
+   41  docker stop web01
+   42  docker ps
+   43  docker rm *
+   44  docker rm 435d13fbbe2a 61317e411fa3
+   45  docker stop 435d13fbbe2a 61317e411fa3
+   46  docker rm 435d13fbbe2a 61317e411fa3
+   47  docker ps -a
+   48  docker rm nginx hello-world
+   49  docker stop nginx hello-world
+   50  docker stop web01 d34701246dd4
+   51  docker rm web01 d34701246dd4
+   52  docker ps -a
+   53  ls
+   54  docker images
+   55  docker rmi 01066d9c3756 4cad75abc83d 74cc54e27dc4
+   56  docker images
+   57  history

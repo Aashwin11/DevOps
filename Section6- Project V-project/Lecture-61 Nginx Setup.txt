@@ -1,0 +1,21 @@
+Lecture-61 Nginx Setup
+
+vagrant ssh wb01
+sudo -i
+
+ 1  cat /etc/hosts
+    2  png app01 -c 4
+    3  ping app01 -c 4
+    4  ping db01 -c 4
+    5  ping rmq01 -c 4
+    6  ping mc01 -c 4
+    7  logout
+    8  apt update && apt upgrade
+    9  apt install nginx -y
+   10  ls /etc/nginx/
+   11  vi /etc/nginx/sites-available/vproapp
+   12  rm -rf /etc/nginx/sites-enabled/default
+   13  ln -s /etc/nginx/sites-available/vproapp /etc/nginx/sites-enabled/vproapp
+   14  systemctl restart nginx
+   15  systemctl status nginx
+   16  history
