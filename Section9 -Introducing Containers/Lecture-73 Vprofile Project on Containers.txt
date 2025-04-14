@@ -1,0 +1,44 @@
+       1  cd compose
+    2  wget https://raw.githubusercontent.com/devopshydclub/vprofile-project/refs/heads/docker/compose/docker-compose.yml
+    3  ls
+    4  docker compose up -d
+    5  history
+ 
+    
+    
+    1  cd comp
+    2  cd compose/
+    3  docker images
+    4  docker ps -a
+    5  ip addr show
+    6  clear
+    7  logout
+    8  cd compose
+    9  docker images
+   10  docker ps -a
+   11  ip addr show
+   12  clear
+   13  logout
+   14  cd compose
+   15  docker images
+   16  docker ps -a
+   17  ip addr show
+   18  clear
+   19  logout
+   20  cd compose
+   21  docker images
+   22  docker ps -a
+   23  ip addr show
+   24  CLEAR
+   25  clear
+   26  logout
+   27  cd compose/
+   28  docker images
+   29  docker ps -a
+   30  ip addr show
+   31  docker compose down
+   32  docker system prune -a
+   33  docker images
+   34  docker ps -a
+   35  hostory
+   36  history
