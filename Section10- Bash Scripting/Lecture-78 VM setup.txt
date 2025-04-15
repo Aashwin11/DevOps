@@ -1,0 +1,32 @@
+  502  mkdir Section-10\ Bash-Scripting/
+  503  ls
+  504  cd Section-10\ Bash-Scripting/
+  505  cd ~
+  506  ls
+  507  cd down
+  508  cd Downloads/
+  509  ls -lt
+  510  ls -ltr
+  511  unzip scriptingVMs.zip
+  512  cd scriptingVMs
+  513  ls
+  514  cd WindowsAndMacIntel/
+  515  ls
+  516  cp Vagrantfile /d/Study/DevOps/Section-10 Bash-Scripting
+  517  cp Vagrantfile /d/Study/DevOps/Section-10 Bash-Scripting/
+  518  cp Vagrantfile /d/Study/DevOps/Section-10\ Bash-Scripting/
+  519  cd /d/Study/DevOps/Section-10\ Bash-Scripting
+  520  ls
+  521  vim Vagrantfile
+  522  cat Vagrantfile
+  523  vagrant up scriptbox
+  524  vagrant ssh
+  525  vagrant ssh scriptbox
+  526  history
+
+
+
+VM:
+    1  vim /etc/hostname
+    2  hostname scriptbox
+    3  history

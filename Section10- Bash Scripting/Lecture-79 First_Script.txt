@@ -1,0 +1,57 @@
+  531  cd Section-10\ Bash-Scripting/
+  532  mkdir /opt/
+  533  cd ..
+  534  ls -ldr
+  535  sudo -i
+  536  sudo -- -i
+  537  ls
+  538  cd Section-10\ Bash-Scripting/
+  539  ls
+  540  cd opt
+  541  cd scirpt
+  542  cd scripts/
+  543  vim firstscript.sh
+  544  ./firstscript.sh
+  545  ls -ltr
+  546  history
+
+
+my script:
+#!/bin/bash
+
+echo "Welcome"
+echo
+echo "-------------------------------"
+echo "Uptime:"
+uptime
+echo "------------------------------------------------------"
+echo "Memory utilized:"
+free -m
+echo "------------------------------------------------------"
+echo "Disk utilized:"
+df-h
+
+### Example to give comment ###
+## Example 2 ##
+~
+
+
+Output:
+Command:
+./firstscript.sh -relative path
+ /d/Study/DevOps/Section-10\ Bash-Scripting/opt/scripts/firstscript.sh -absolute path
+
+
+Welcome
+
+-------------------------------
+Uptime:
+./firstscript.sh: line 7: uptime: command not found
+############
+Memory utilized:
+./firstscript.sh: line 10: free: command not found
+############
+Disk utilized:
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  213G  176G   37G  83% /
+D:                    245G   90G  155G  37% /d

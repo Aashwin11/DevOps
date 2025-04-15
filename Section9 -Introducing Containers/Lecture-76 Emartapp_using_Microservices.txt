@@ -1,0 +1,11 @@
+    1  git clone https://github.com/devopshydclub/emartapp.git
+    2  ls
+    3  cd emart
+    4  cd emartapp/
+    5  ls
+    6  vim docker-compose.yaml
+    7  docker compose up -d
+    8  docker images
+    9  docker ps -a
+   10  ip addr show
+   11  history

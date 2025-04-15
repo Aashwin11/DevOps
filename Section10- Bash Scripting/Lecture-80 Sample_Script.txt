@@ -1,0 +1,41 @@
+    1  vim /etc/hostname
+    2  hostname scriptbox
+    3  history
+    4  logout
+    5  mkdir /opt/scripts/
+    6  cd /opt/scripts/
+    7  vim websiteScript.sh
+    8  ./websiteScript.sh
+    9  chmod +x websiteScript.sh
+   10  ./websiteScript.sh
+   11  history
+
+
+my script:
+#!/bin/bash
+
+
+sudo yum install wget unzip httpd -y
+#Install unzip adn httpd for website, using sudo for root user , and -y so no questions are asked
+
+
+sudo systemctl start httpd
+sudo systemctl enable httpd
+mkdir -p /tmp/webfiles
+# Create a directory , -p to make sure if the dir already exists it shows no error , it simply ignores it
+
+cd /tmp/webfiles/
+
+wget https://www.tooplate.com/zip-templates/2096_individual.zip
+unzip 2096_individual.zip
+sudo cp -r 2096_individual/* /var/www/html
+
+systemctl restart httpd
+
+rm -rf /tmp/webfiles/
+
+echo "It is done"
+echo
+echo "Here is the url:"
+ip addr show
+
