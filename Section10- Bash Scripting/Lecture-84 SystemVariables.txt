@@ -1,0 +1,8 @@
+   61  free -m
+   62  echo ?
+   63  echo $?
+   64  freeeeeee -m
+   65  echo $?
+   66  freeeeeee -12324324
+   67  echo $?
+   68  history

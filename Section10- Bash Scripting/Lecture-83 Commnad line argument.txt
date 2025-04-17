@@ -1,0 +1,59 @@
+   41  vim 3_args.sh
+   42  chmod +x 3_args.sh
+   43  x="123"
+   44  echo $x
+   45  echo $y
+   46  ./3_args.sh
+   47  ./3_args.sh Jenkins
+   48  vim 3_args.sh
+   49  vim 3_args.sh Jenkins
+   50  ./3_args.sh Jenkins
+   51  vim 3_args.sh
+   52  ./3_args.sh Jenkins
+   53  history
+
+
+Trial:
+
+
+   54  cp 2_websiteScript.sh 3_websitescriptCommandLineARgument.sh
+   55  vim 3_websitescriptCommandLineARgument.sh
+   56  chmod +x 3_websitescriptCommandLineARgument.sh
+   57  ./3_websitescriptCommandLineARgument.sh https://www.tooplate.com/zip-templates/2136_kool_form_pack.zip 2136_kool_form_pack -y
+   58  vim 3_websitescriptCommandLineARgument.sh
+
+
+
+Script:
+#!/bin/bash
+
+###VARIABLES###
+PACKAGE="httpd wget unzip"
+SVC="httpd"
+#URL="https://www.tooplate.com/zip-templates/2096_individual.zip"
+#ART_NAME="2096_individual"
+TEMPDIR="/tmp/webfiles"
+
+sudo yum install $PACKAGE
+#Install unzip adn httpd for website, using sudo for root user , and -y so no questions are asked
+
+
+sudo systemctl start $SVC
+sudo systemctl enable $SVC
+mkdir -p $TEMPDIR
+# Create a directory , -p to make sure if the dir already exists it shows no error , it simply ignores it
+
+cd $TEMPDIR
+
+wget $1
+unzip $2.zip
+sudo cp -r $2/* /var/www/html
+
+systemctl restart $SVC
+
+rm -rf $TEMPDIR
+
+echo "It is done"
+echo
+echo "Here is the url:"
+ip addr show
