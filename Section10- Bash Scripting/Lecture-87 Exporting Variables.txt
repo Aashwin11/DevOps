@@ -1,0 +1,29 @@
+  ROOT USER:
+  116  vim testvars.sh
+  117  SEASON="Monsoon"
+  118  echo $SEASON
+  119  ./testvars.sh
+  120  chmod +x testvars.sh
+  121  ./testvars.sh
+  122  export SEASON
+  123  ./testvars.sh
+  124  cd ~
+  125   ls -a
+  126  vi .bashrc
+  127  exit
+  128  echo $SEASON
+  129  cd /opt/scripts/
+  130  ./testvars.sh
+  131  history
+  132  vim /etc/profile
+  133  logout
+  134  ./testvars.sh
+  135  echo $SEASON
+
+  Vagrant User:
+    7  sudo -i
+    8  echo $SEASON
+    9  logout
+   10  echo $SEASON
+   11  sudo -i
+   12  history

@@ -1,0 +1,21 @@
+  139  cd /opt/scripts/
+  140  vim 6_unserinputs.sh
+  141  chmod +x 6_unserinputs.sh
+  142  ./6_unserinputs.sh
+
+
+Script:
+#!/bin/bash
+
+echo "Enter your skills"
+read SKILLS
+
+
+echo "YOur $SKILLS is in high demand "
+
+read -p "USername:" USR
+read -sp "Password" PAS
+
+echo "Login Success ! Welcome $USR"
+
+

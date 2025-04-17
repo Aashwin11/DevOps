@@ -1,0 +1,35 @@
+   81  uptime
+   82  UP=`uptime`
+   83  echo $UP
+   84  who
+   85  whoami
+   86  CURRENT USERS=$(who)
+   87  CURRENT_USERS=$(who)
+   88  echo $CURRENT_USERS
+   89  free -m
+   90  free -m | grep Mem
+   91  free -m | grep Mem | awk '{print $4}'
+   92  FREE_RAM=free -m | grep Mem | awk '{print $4}'
+   93  FREE_RAM=$(free -m | grep Mem | awk '{print $4}')
+   94  echo "Free ram is $FREE_RAM"
+   95  vim 4_trialScript.sh
+   96  ./4_trialScript.sh
+   97  chmod +x 4_trialScript.sh
+   98  ./4_trialScript.sh
+   99  df -h | grep '/dev/slab/'
+  100  df -h
+  101  vim 4_trialScript.sh
+  102  ./4_trialScript.sh
+  103  uptime | grep
+  104  uptime
+  105  ./4_trialScript.sh
+  106  vim 4_trialScript.sh
+  107  ./4_trialScript.sh
+  108  df -h | grep "/dev/sla1"
+  109  df -h
+  110  df -h | grep "/dev/sda1"
+  111  vim 4_trialScript.sh
+  112  ./4_trialScript.sh
+  113  vim 4_trialScript.sh
+  114  ./4_trialScript.sh
+  115  history

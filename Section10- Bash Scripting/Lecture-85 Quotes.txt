@@ -1,0 +1,11 @@
+   69  SKILL="DevOps"
+   70  echo $SKILL
+   71  SKILL='DevOps'
+   72  echo $SKILL
+   73  echo "I have $SKILL shil"
+   74  echo 'I have $SKILL shil'
+   75  VRIUS="Covid"
+   76  echo "Due to $VIRUS virus, Copany lost $9 milloin dollars"
+   77  echo 'Due to $VIRUS virus, Company lost $9 milloin dollars'
+   78  echo "Due to $VIRUS virus, Company lost \$9 milloin dollars"
+   79  history
