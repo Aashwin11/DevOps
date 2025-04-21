@@ -1,0 +1,96 @@
+  179  systemctl status httpd
+  180  cat /var/run/httpd/ht
+  181  cat /var/run/httpd/httpd.pid
+  182  echo $?
+  183  systemctl stop httpd
+  184  cat /var/run/httpd/httpd.pid
+  185  echo $?
+  186  systemctl start httpd
+  187  cat /var/run/httpd/httpd.pid
+  188  echo $?
+  189  vim 10_monit.sh
+  190  chmod +x 10_monit.sh
+  191  ./10
+  192  ./10_monit.sh
+  193  systemctl stop httpd
+  194  ./10_monit.sh
+  195  mv 10_monit.sh /opt/scripts/
+  196  cd /opt/scripts/
+  197  ls
+  198  crontab -e                   //CRONTAB IS USED TO AUTOMATE 
+  199  systemctl stop httpd
+  200  systemctl status httpd
+  201  cat /var/logs/
+  202  ls /var/log/
+  203  cat /var/log/ monit_httpd.log
+  204  cd /var/log/
+  205  ls
+  206  cat monit_httpd.log
+  207  systemctl stop httpd
+  208  cat monit_httpd.log
+  209  cd /opt/scripts/
+  210  ls
+  211  vim 11_monit.sh
+  212  cp 10_monit.sh 11_monit.sh
+  213  vim 11_monit.sh
+  214  ./11_monit.sh
+  215  systemctl stop httpd
+  216  ./11_monit.s
+
+
+SCRIPT 1:
+#!/bin/bash
+
+ls /var/run/httpd/httpd.pid &> /dev/null
+
+
+if [ $? -eq 0 ]
+then
+        echo "Process is running"
+else
+        echo "Httpd process is not running"
+        echo "Starting process"
+        systemctl start httpd
+
+        if [ $? -eq 0 ]
+        then
+                echo "Process started successfully"
+        else
+                echo "PRocess failed , Please contact admin"
+        fi
+fi
+
+date
+
+
+
+  SCRIPT 2:
+  #!/bin/bash
+
+
+
+if [ -f /var/run/httpd/httpd.pid &> /dev/null ]
+then
+        echo "Process is running"
+else
+        echo "Httpd process is not running"
+        echo "Starting process"
+        systemctl start httpd
+
+        if [ $? -eq 0 ]
+        then
+                echo "Process started successfully"
+        else
+                echo "PRocess failed , Please contact admin"
+        fi
+fi
+
+date
+
+
+crontab -e
+
+# MM HH DOM mm DOW  COMMAND
+
+# 30 20 * * 1-5 COMMAND
+* * * * * /opt/scripts/10_monit.sh &> /var/log/monit_httpd.log

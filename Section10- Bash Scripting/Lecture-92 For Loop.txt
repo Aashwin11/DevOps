@@ -1,0 +1,56 @@
+  221  vim 12_for.sh
+  222  chmod +x 12_for.sh
+  223  ./12
+  224  ./12_for.sh
+  225  vim 12_for.sh
+  226  ./12_for.sh
+  227  vim 13_for.sh
+  228  chmod +x 13_for.sh
+  229  ./13_for.sh
+  230  vim 14_for.sh
+  231  chmod +x 14_for.sh
+  232  ./14_for.sh
+  233  history
+
+
+SCRIPT 1:
+    #!/bin/bash
+
+    for VAR1 in java .net python ruby php
+    do
+            echo "Looping"
+            sleep 1
+            echo "-----------"
+            echo "Value of VAR1: $VAR1"
+            echo "-----------"
+            date
+    done
+
+
+
+SCRIPT 2:
+    #!/bin/bash
+
+    MYUSER="alpha beeta gaama"
+
+    for usr in $MYUSER
+    do
+            echo "Adding user $usr"
+            useradd $usr
+            id $usr
+            echo " ------------ "
+    done
+
+
+ 
+SCRIPT 3:
+    #!/bin/bash
+
+    echo "Nash version ${BASH_VERSION}"
+
+    for i in {0..10..2}
+    do
+            echo "Welcome $i times"
+    done
+
+    ~       

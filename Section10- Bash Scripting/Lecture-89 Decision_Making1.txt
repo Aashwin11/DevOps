@@ -1,0 +1,50 @@
+  146  vim 7_if1.sh
+  147  chmod +x 7_if1.sh
+  148  ./7_if1.sh
+  149  vim 7_if1.sh
+  150  ./7_if1.sh
+  151  vim 7_if1.sh
+  152  ./7_if1.sh
+  153  history
+
+SCRIPT:
+#!/bin/bash
+
+read -p "Take a number:" NUM
+echo
+
+if [ $NUM -gt 100 ]
+then
+        echo "Entered if block"
+        sleep 3
+        echo "Number >100"
+        echo
+        date
+fi
+echo "Execution completse"
+
+
+  155  cp 7_if1.sh 8_ifelse.sh
+  156  bim 8_ifelse.sh
+  157  vim 8_ifelse.sh
+  158  chmod +x 8_ifelse.sh
+  159  ./8_ifelse.sh
+
+SCRIPT:
+#!/bin/bash
+
+read -p "Take a number:" NUM
+echo
+
+if [ $NUM -gt 100 ]
+then
+        echo "Entered if block"
+        sleep 3
+        echo "Number >100"
+        echo
+        date
+else
+        echo "THe numberis < 100
+fi
+echo "Execution completse"
+                         

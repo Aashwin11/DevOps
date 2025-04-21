@@ -1,0 +1,40 @@
+  162  ip addr show
+  163  ip addr show | grep -v  <LOOPBACK,UP,LOWER_UP>
+  164  ip addr show | grep -v  '<LOOPBACK,UP,LOWER_UP>'
+  165  clear
+  166  ip addr show | grep -v LOOPBACK | grep -ic mtu
+  167  ip addr show | grep -v LOOPBACK
+  168  vim 8_ifelif.sh
+  169  chmod +x 8_ifelif.sh
+  170  ./8_ifel
+  171  ./8_ifelif.sh
+  172  vim 8_ifelif.sh
+  173  ./8_ifelif.sh
+  174  vim 8_ifelif.sh
+  175  ./8_ifelif.sh
+  176  history
+
+
+
+
+
+
+
+
+
+SCRIPT:
+
+
+#!/bin/bash
+value=`ip addr show| grep -v LOOPBACK | grep -ic mtu`
+
+if [ $value -eq 1  ]
+then
+        echo "! active NEtwork Interface found"
+elif [ $value -gt 1 ]
+then
+        echo "Muliple active interface"
+else
+        echo "No active interface"
+fi
+echo "END"

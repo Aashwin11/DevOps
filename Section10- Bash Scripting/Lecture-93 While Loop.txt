@@ -1,0 +1,22 @@
+  237  vim 15_while.sh
+  238  chmod +x 15_while.sh
+  239  ./15_while.sh
+  240  vim 15_while.sh
+  241  ./15_while.sh
+  242  vim 15_while.sh
+  243  ./15_while.sh
+  244  history
+
+
+SCRIPT:
+    counter=0
+
+    while [ $counter -le 5 ]  # -le means less than or equal to
+    do
+        sleep 1
+        echo "looping"
+        echo "Value of Counter $counter"
+        counter=$((counter + 1))
+    done
+
+    echo "Out of loop"
