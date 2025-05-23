@@ -1,0 +1,5 @@
+  Id CommandLine
+  -- -----------
+   1 choco install awscli -y
+   2 awscli --version
+    
