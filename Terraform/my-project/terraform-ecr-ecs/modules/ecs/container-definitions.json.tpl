@@ -12,7 +12,7 @@
     "environment": [
       {
         "name": "MONGO_URL",
-        "value": "$${mongodb+srv://todoUser:abcd1234@todocluster.v5qra49.mongodb.net/tod_app?retryWrites=true&w=majority&appName=todoCluster}"
+        "value": "$${mongo_url_string}"
       },
       {
         "name": "PORT",
