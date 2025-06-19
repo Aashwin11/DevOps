@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - MONGODB_URI=mongodb://mongo:27017/todo_app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:6.0
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:
